@@ -51,3 +51,43 @@ const notSureList2: unknown[] = [4, true, 'free'];
 if (typeof notSureList2[0] === 'number') {
     console.log(notSureList2[0].toFixed());
 }
+
+
+//Void 常用于函数返回类型
+function logMessage(message: string): void {
+    console.log(message);
+}
+
+//当你指定了--strictNullChecks标记，null和undefined只能赋值给void和它们各自
+let u: undefined = undefined;
+// u = logMessage('a');
+
+// let n: null = undefined;  //error undefined 不能赋值给null
+let n: null = null;
+
+//可以使用联合类型string | null | undefined
+let uniontype: string | null | undefined;
+uniontype = '1';
+uniontype = null;
+uniontype = undefined;
+console.log(uniontype);
+
+//object表示非原始类型，也就是除number，string，boolean，symbol，null或undefined之外的类型。
+let o: object = [];
+let o1: object = () => 123;
+
+//never 在需要明确表示“函数永远不会有返回值”的场景下非常有用
+function throwError(message: string): never {
+    throw new Error(message);
+}
+
+
+//类型断言
+let someValue: any = 'this is a string';
+//“尖括号”语法
+let len = (<string>someValue).length;
+//as语法
+len = (someValue as string).length;
+console.log(len);
+
+
