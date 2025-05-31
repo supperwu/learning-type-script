@@ -41,3 +41,13 @@ const c: Color = Color.Green;
 console.log(c);
 console.log(Color[c]);
 
+
+//Any
+
+const notSureList: any[] = [4, true, 'free'];
+console.log(notSureList[0].toFixed());
+
+const notSureList2: unknown[] = [4, true, 'free'];
+if (typeof notSureList2[0] === 'number') {
+    console.log(notSureList2[0].toFixed());
+}
