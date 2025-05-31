@@ -1,9 +1,11 @@
 console.log('Hello, world!');
 
-let a = 1 + 2;
-let b = a + 3
+const a = 1 + 2;
+const b = a + 3
 
-let c = {
+const c = {
     apple: a,
     banana: b
 }
+
+console.log(c);
