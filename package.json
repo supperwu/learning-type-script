@@ -21,8 +21,11 @@
   },
   "homepage": "https://github.com/supperwu/learning-type-script#readme",
   "devDependencies": {
+    "@eslint/js": "^9.28.0",
     "@typescript-eslint/eslint-plugin": "^8.33.0",
     "@typescript-eslint/parser": "^8.33.0",
-    "eslint": "^9.28.0"
+    "eslint": "^9.28.0",
+    "globals": "^16.2.0",
+    "typescript-eslint": "^8.33.0"
   }
 }
